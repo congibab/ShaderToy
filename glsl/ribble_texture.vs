@@ -3,6 +3,7 @@
 void mainImage( out vec4 fragColor, in vec2 fragCoord )
 {
    	vec2 uv = fragCoord.xy / iResolution.xy;
+       uv.y += 0.1 ;
     vec3 col = texture(iChannel0, uv).rgb;
 
     float d = distance(vec2(0.5, 0.5), uv);
